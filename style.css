@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:600&display=swap');
+
+
+:root{
+  --pink:#ff52bf;
+  --dark-cyan:#00252e;
+  --pale-cyan:hsl(193, 100%, 96%);
+  --gray-blue:hsl(208, 11%, 55%);
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif; 
+}
+
+h1, 
+h2,
+h3{
+  font-family: 'Poppins', sans-serif;  
+  color: var(--dark-cyan);
+}
+
+/***** Utils *****/
+.util-block{
+  display: block;
+}
+
+.util-width-35{
+  max-width: 35rem;
+}
+
+.util-flex-center{
+  display: flex;
+  justify-content: center;
+}
+/***** Utils END *****/
+
+/***** Button component *****/
+.button{
+  padding: 1.5rem 5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: box-shadow .2s ease;
+}
+
+.button:focus{
+  outline: none;
+}
+
+.button--white{
+  color: var(--dark-cyan);
+  background-color: white;
+  box-shadow: -3px 2px 23px 1px rgba(0,37,46,0.29);
+}
+
+.button--large{
+  padding: 2.5rem 9rem;
+}
+
+.button--white:hover{
+  box-shadow: -3px 2px 23px 5px rgba(0,37,46,0.35);
+}
+
+.button--pink{
+  color: white;
+  background-color: var(--pink);
+  box-shadow: -3px 2px 23px 1px rgba(255,82,191,0.29);
+}
+
+.button--pink:hover{
+  box-shadow: -3px 2px 23px 7px rgba(255,82,191,0.29);
+}
+/***** Button component END *****/
+
+/***** Header *****/
+.header{
+  min-height: 85vh;
+  width: 100%;
+  background-image: url(./images/bg-hero-desktop.svg);
+  background-color: var(--pale-cyan);
+  background-size: cover;
+  background-position: center;
+}
+
+.header__container{
+  margin: 0 auto;
+  width: 85%;
+}
+
+.header__top-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0 4rem 0;
+}
+
+.logo{
+  max-width: 20rem;
+}
+
+.header__bottom-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__typography{
+  flex-basis: 40%;
+  padding-right: 4rem;
+}
+
+.header__heading{
+  line-height: 1.4;
+}
+
+.header__description{
+  padding: 2.5rem 0;
+  max-width: 51rem;
+  color: var(--dark-cyan);
+  line-height: 1.55;
+}
+
+.header__image-wrapper{
+  flex-basis: 60%;
+}
+
+.header__image{
+  max-width: 100%;
+}
+/***** Header END *****/
+
+/***** Main section *****/
+.section-main{
+  width: 85%;
+  margin: 10rem auto;
+}
+
+.card{
+  display: flex;
+  padding: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .03);
+}
+
+.card:not(:last-child){
+  margin-bottom: 6rem;
+}
+
+.card__typography-wrapper{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__typography{
+  max-width: 50rem;
+}
+
+.card__heading{
+  padding: 2rem 0;
+}
+
+.card__description{
+  color: var(--gray-blue);
+  font-size: 1.6rem;
+  line-height: 1.55;
+}
+
+.card__image-container{
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.card__image{
+  width: 100%;
+  max-width: 35rem;
+}
+
+.action-card{
+  margin: auto;
+  max-width: 70rem;
+  text-align: center;
+  padding: 6rem 8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .03);
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+/***** Main section END *****/
+
+/***** Footer *****/
+.footer{
+  background-color: var(--dark-cyan);
+  padding: 16rem 0 4rem 0;
+  margin-top: -19rem;
+  font-size: 1.5rem;
+  color: var(--pale-cyan);
+}
+
+.footer__container{
+  width: 85%;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.footer__logo path{
+  fill: white;
+}
+
+.footer__info-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/*footer contacts section*/
+.contacts{
+  flex-basis: 30%;
+}
+
+.contact__wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact__icon{
+  margin-right: 1rem;  
+  max-height: 1.6rem;
+}
+
+/*footer links section*/
+.links{
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.links__wrapper{
+  max-width: 33rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links__section{
+  display: flex;
+  flex-direction: column;
+}
+
+.links__section a{
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+
+/*footer social links section*/
+.social{
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.social__link{
+  max-width: 4rem;
+  width: 100%;
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid var(--pale-cyan);
+  border-radius: 50px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link svg{
+  width:100%;
+  color: var(--pale-cyan);
+}
+
+.footer__copyright{
+  text-align: right;
+  font-size: 1.4rem;
+}
+
+.action-card__heading{
+  margin-bottom: 3rem;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center; 
+  margin-top: 2rem;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+/***** Footer END *****/
+
+@media screen and (max-width:675px){
+  html{
+    font-size: 56.25%;
+  }
+
+  .header{
+    background-image: url(./images/bg-hero-mobile.svg);
+  }
+
+  .header__bottom-row{
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+
+  .header__image-wrapper{
+    padding-top: 6rem;
+  }
+
+  .logo{
+    width: 12rem;
+  }
+
+  .button{
+    padding:1.25rem 3rem;
+  }
+
+  .header__typography{
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .header__heading{
+    font-size: 2.5rem;
+  }
+
+  .card{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card__typography-wrapper{
+    order: 1;
+  }
+
+  .action-card{
+    padding: 3rem 2rem;
+  }
+
+  .action-card__heading{
+    font-size: 1.75rem;
+  }
+  
+
+  .footer__info-container{
+    flex-direction: column;
+  }
+  
+  .links{
+    margin: 3rem 0;
+    justify-content: start;
+  }
+
+  .links__wrapper{
+    flex-direction: column;
+  }
+
+  .footer__copyright{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+}
